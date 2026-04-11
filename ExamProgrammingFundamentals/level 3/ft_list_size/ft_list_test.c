@@ -2,35 +2,52 @@
 #include <stdlib.h>
 #include "ft_list.h"
 
-// Deklarimi i funksionit që ke bërë
-int ft_list_size(t_list *begin_list);
-
-int main()
+int	ft_list_size(t_list *begin_list)
 {
-    // Krijojmë disa elemente
-    t_list *head = malloc(sizeof(t_list));
-    t_list *second = malloc(sizeof(t_list));
-    t_list *third = malloc(sizeof(t_list));
+	int count = 0;
 
-    int a = 10, b = 20, c = 30;
-
-    // Vendosim të dhënat dhe lidhjet
-    head->data = &a;
-    head->next = second;
-
-    second->data = &b;
-    second->next = third;
-
-    third->data = &c;
-    third->next = NULL;
-
-    // Testojmë ft_list_size
-    printf("Size of the list: %d\n", ft_list_size(head));
-
-    // Pastrimi i memories
-    free(third);
-    free(second);
-    free(head);
-
-    return 0;
+	while (begin_list != 0)
+	{
+		count++;
+		begin_list = begin_list->next;
+	}
+	return (count);
 }
+
+t_list *new_node(void *data)
+{
+	t_list *node;
+
+	node = (t_list *)malloc(sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->data = data;
+	node->next = NULL;
+	return (node);
+}
+
+int main(void)
+{
+	t_list *a; 
+	t_list *b;
+	t_list *c;
+
+	// Krijojmë 3 elementë
+	a = new_node("Hello");
+	b = new_node("World");
+	c = new_node("!");
+
+	// I lidhim
+	a->next = b;
+	b->next = c;
+	c->next = NULL;
+
+	// Thërrasim funksionin
+	int size = ft_list_size(a);
+
+	printf("Size of list: %d\n", size);
+
+	return (0);
+}
+ 
+
