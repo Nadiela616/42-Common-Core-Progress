@@ -52,3 +52,44 @@ int main(void)
 }
 
 */
+
+
+/*
+testim:
+#include <stdio.h>
+#include <stdlib.h>
+
+int *ft_range(int start, int end);
+
+int main(void)
+{
+    int start = 0;
+    int end = -3;
+    int i;
+    int len;
+
+    if (start > end)
+        len = start - end + 1;
+    else
+        len = end - start + 1;
+
+    int *arr = ft_range(start, end);
+
+    if (!arr)
+    {
+        printf("malloc failed\n");
+        return 1;
+    }
+
+    i = 0;
+    while (i < len)
+    {
+        printf("%d ", arr[i]);
+        i++;
+    }
+    printf("\n");
+
+    free(arr);
+    return 0;
+}
+    */

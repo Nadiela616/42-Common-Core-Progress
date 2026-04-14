@@ -3,17 +3,19 @@
 int *ft_rrange(int start, int end)
 {
     int i = 0;
-    int len = (end - start < 0) ? (start - end + 1) : (end - start + 1);
-    int *range = (int *)malloc(len * sizeof(int));
+    int len = (start > end) ? (start - end + 1) : (end - start + 1);
+    int *range = malloc(sizeof(int) * len);
+
     if (!range)
         return NULL;
 
     while (i < len)
     {
         if (start <= end)
-            range[i++] = end--;
+            range[i] = end - i;
         else
-            range[i++] = end++;
+            range[i] = end + i;
+        i++;
     }
     return range;
 }
@@ -32,7 +34,7 @@ void test_rrange(int start, int end)
 
     int len = (end - start < 0) ? (start - end + 1) : (end - start + 1);
 
-    printf("Reverse range from %d to %d: ", start, end);
+    printf("Reverse rrange from %d to %d: ", start, end);
     for (int i = 0; i < len; i++)
         printf("%d ", arr[i]);
     printf("\n");
@@ -50,5 +52,5 @@ int main(void)
     test_rrange(10, 5);
     return 0;
 }
-
+    
 */

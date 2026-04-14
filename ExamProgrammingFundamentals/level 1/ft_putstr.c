@@ -12,6 +12,6 @@ void ft_putstr(char *str)
 
 // int main()
 // {
-// ft_putstr("Hello WOrld");
+// ft_putstr("Hello World");
 // write(1, "\n", 1);
 // }

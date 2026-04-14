@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-char *ft_strrev(char *str){
-    int i;
-    int j;
+char *ft_strrev(char *str)
+{
+    int i = 0;
+    int j = 0;
     char temp;
 
-    i = 0;
-    while (str[i])
-      i++;
-    j = i - 1;
-    i = 0;
+    while (str[j])
+        j++;
+    j--;
+
     while (i < j)
     {
         temp = str[i];
@@ -21,10 +21,10 @@ char *ft_strrev(char *str){
     return (str);
 }
 
-
-int main()
+int main(void)
 {
     char s[] = "hello";
 
     printf("%s\n", ft_strrev(s));
+    return (0);
 }

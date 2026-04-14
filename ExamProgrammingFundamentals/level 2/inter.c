@@ -1,31 +1,3 @@
-// #include <unistd.h>
-// int main(int ac, char **av)
-// {
-//     int i;
-//     int j;
-//     int k;
-//     char c;
-//     if (ac == 3)
-//     {
-//         i = 0;
-//         while (av[1][i])
-//         {
-//             c = av[1][i];
-//             j = 0;
-//             while (j < i)
-//             {
-//                 if (av[1][j] == c)
-//                 break;
-//             j++;
-//             }
-//             if (j !=  i )
-//             {
-
-//             }
-//         }
-//     }
-// }
-
 #include <unistd.h>
 
 int	ft_putchar(char c);
