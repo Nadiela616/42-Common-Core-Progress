@@ -18,6 +18,7 @@ int *ft_range(int start, int end)
     return range;
 }
 
+
 /*
 #include <stdio.h>
 #include <stdlib.h>

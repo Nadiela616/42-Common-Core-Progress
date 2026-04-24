@@ -125,6 +125,13 @@ Your function must be declared as follows:
 
 void ft_swap(int *a, int *b);
 
+Expected files   : rot_13.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays it, replacing each of its
+letters by the letter 13 spaces ahead in alphabetical order.
+
 
 
 
